@@ -6,4 +6,29 @@
 `bouyguestelecom-sms` is based on [bouyguessms](https://github.com/tomsquest/bouyguessms) whose:
  * Development has been stopped
  * Original license is here: [bouyguessms/LICENSE](bouyguessms/LICENSE)
- 
+
+## Download sources
+```bash
+go get github.com/cyosp/bouyguestelecom-sms
+```
+
+## Download dependencies
+```bash
+go get github.com/pkg/errors
+go get golang.org/x/net/publicsuffix
+```
+
+## Build
+ * Linux AMD 64 bits
+```bash
+env GOOS=linux GOARCH=amd64 go build
+```
+ * Linux ARM v7
+```bash
+env GOOS=linux GOARCH=arm GOARM=7 go build
+```
+
+## Reduce binary size
+```bash
+strip bouyguestelecom-sms
+```
