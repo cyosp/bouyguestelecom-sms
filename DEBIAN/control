@@ -1,0 +1,8 @@
+Package: bouyguestelecom-sms
+Version: 1.0.0-0
+Section: base
+Priority: optional
+Architecture: amd64 armhf
+Maintainer: CYOSP
+Description: Tool based on Bouygues Telecom SMS sending feature from customer space
+Homepage: http://www.cyosp.com
