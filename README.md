@@ -7,6 +7,16 @@
  * Development has been stopped
  * Original license is here: [bouyguessms/LICENSE](bouyguessms/LICENSE)
 
+## Setup
+```bash
+sudo apt install golang-go
+cat << EOF >> ~/.bashrc
+
+# Go environment
+export GOPATH=$HOME/go
+EOF
+```
+
 ## Download sources
 ```bash
 go get github.com/cyosp/bouyguestelecom-sms
@@ -31,4 +41,9 @@ env GOOS=linux GOARCH=arm GOARM=7 go build
 ## Reduce binary size
 ```bash
 strip bouyguestelecom-sms
+```
+
+## Installation
+```bash
+sudo mv bouyguestelecom-sms /usr/local/bin
 ```
