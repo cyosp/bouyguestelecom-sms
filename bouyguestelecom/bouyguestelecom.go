@@ -3,14 +3,14 @@ package bouyguestelecom
 import "github.com/pkg/errors"
 
 // GetSmsLeft fetches the remaining number of SMS
-func GetSmsLeft(login, pass string) (SmsLeft, error) {
+func GetSmsLeft(lastname, login, pass string) (SmsLeft, error) {
 	client, err := newHTTPClient()
 	if err != nil {
 		return NoSmsLeft, errors.Wrap(err, "unable to create httpClient")
 	}
 
 	loginner := httpLoginner{client}
-	if err = loginner.Login(login, pass); err != nil {
+	if err = loginner.Login(lastname, login, pass); err != nil {
 		return NoSmsLeft, errors.Wrap(err, "unable to login")
 	}
 
@@ -19,14 +19,14 @@ func GetSmsLeft(login, pass string) (SmsLeft, error) {
 }
 
 // SendSms sends msg to the specified recipients
-func SendSms(login, pass string, msg string, to string) (SmsLeft, error) {
+func SendSms(lastname, login, pass string, msg string, to string) (SmsLeft, error) {
 	client, err := newHTTPClient()
 	if err != nil {
 		return NoSmsLeft, errors.Wrap(err, "unable to create httpClient")
 	}
 
 	loginner := httpLoginner{client}
-	if err = loginner.Login(login, pass); err != nil {
+	if err = loginner.Login(lastname, login, pass); err != nil {
 		return NoSmsLeft, errors.Wrap(err, "unable to login")
 	}
 
