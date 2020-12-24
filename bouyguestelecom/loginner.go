@@ -15,13 +15,13 @@ type httpLoginner struct {
 	client httpClient
 }
 
-func (l *httpLoginner) Login(login, pass string) error {
+func (l *httpLoginner) Login(lastname, login, pass string) error {
 	tokens, err := l.getTokens()
 	if err != nil {
 		return err
 	}
 
-	return l.postLogin(login, pass, tokens)
+	return l.postLogin(lastname, login, pass, tokens)
 }
 
 type tokens struct {
@@ -51,10 +51,11 @@ func (l *httpLoginner) extractExecution(body string) (string, error) {
 	return "", errors.New("execution token not found")
 }
 
-func (l *httpLoginner) postLogin(login, pass string, tokens *tokens) error {
+func (l *httpLoginner) postLogin(lastname, login, pass string, tokens *tokens) error {
 	loginURL := "https://www.mon-compte.bouyguestelecom.fr/cas/login?service=https%3A%2F%2Fwww.secure.bbox.bouyguestelecom.fr%2Fservices%2FSMSIHD%2FsendSMS.phtml"
 
 	data := make(url.Values)
+	data.Add("lastname", lastname)
 	data.Add("username", login)
 	data.Add("password", pass)
 	data.Add("rememberMe", "true")
