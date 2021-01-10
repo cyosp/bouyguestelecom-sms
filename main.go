@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-var version = "1.1.0"
+var version = "0.0.0"
 
 func main() {
 	lastname := flag.String("lastname", "", "Last name associated to the Bouygues Telecom account")
