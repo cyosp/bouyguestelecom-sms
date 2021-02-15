@@ -1,3 +1,9 @@
+bouyguestelecom-sms (1.1.1) stable; urgency=high
+
+  * Fix: Authentication: 502 Bad Gateway
+
+ -- CYOSP <cyosp@cyosp.com>  Mon, 15 Feb 2021 08:00:00 +0100
+
 bouyguestelecom-sms (1.1.0) stable; urgency=low
 
   * Add new optional lastname argument for new authentication

@@ -25,11 +25,11 @@ func (l *httpLoginner) Login(lastname, login, pass string) error {
 }
 
 type tokens struct {
-	execution         string
+	execution string
 }
 
 func (l *httpLoginner) getTokens() (*tokens, error) {
-	body, err := l.client.Get("https://www.mon-compte.bouyguestelecom.fr/cas/login")
+	body, err := l.client.Get("https://www.mon-compte.bouyguestelecom.fr/cas/login?&service=https://oauth2.bouyguestelecom.fr/callback/picasso/protocol/cas")
 	if err != nil {
 		return nil, err
 	}
