@@ -1,5 +1,7 @@
 Release notes
 -------------
+##### 1.1.2 (2021-02-17)
+ * Fix: Authentication: 400 Bad Request
 ##### 1.1.1 (2021-02-15)
  * Fix: Authentication: 502 Bad Gateway
 ##### 1.1.0 (2021-01-10)

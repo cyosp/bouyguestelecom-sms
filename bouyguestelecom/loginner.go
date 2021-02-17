@@ -29,7 +29,7 @@ type tokens struct {
 }
 
 func (l *httpLoginner) getTokens() (*tokens, error) {
-	body, err := l.client.Get("https://www.mon-compte.bouyguestelecom.fr/cas/login?&service=https://oauth2.bouyguestelecom.fr/callback/picasso/protocol/cas")
+	body, err := l.client.Get("https://www.mon-compte.bouyguestelecom.fr/cas/login?service=https%3A%2F%2Fwww.secure.bbox.bouyguestelecom.fr%2Fservices%2FSMSIHD%2FsendSMS.phtml")
 	if err != nil {
 		return nil, err
 	}

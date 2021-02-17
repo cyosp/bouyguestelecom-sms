@@ -1,3 +1,9 @@
+bouyguestelecom-sms (1.1.2) stable; urgency=high
+
+  * Fix: Authentication: 400 Bad Request
+
+ -- CYOSP <cyosp@cyosp.com>  Wed, 17 Feb 2021 07:15:00 +0100
+
 bouyguestelecom-sms (1.1.1) stable; urgency=high
 
   * Fix: Authentication: 502 Bad Gateway
